@@ -1,10 +1,13 @@
 from flask import Flask, request
-from flask_restful import Api, Resource
+from flask_restful import Api, Resource, reqparse, abort
 import pickle
 
 app = Flask(__name__)
 api = Api(app)
 
+model_post_args = reqparse.RequestParser()
+model_post_args.add_argument(
+    'lyric', type=str, help='Utilize esta variável com a Letra da Música como conteúdo', required=True)
 
 model = pickle.load(open('logisticRegression.pkl', 'rb'))
 countVec = pickle.load(open('tfidf_vectorizer.pkl', 'rb'))
@@ -23,6 +26,7 @@ def clean_text(text):
 
 class Model(Resource):
     def post(self):
+        args = model_post_args.parse_args()
         features = [clean_text(request.form.get('lyric'))]
         final_features = countVec.transform(features)
         prediction = model.predict(final_features)
@@ -35,9 +39,7 @@ class Model(Resource):
         elif prediction == 4:
             return {'genero': 'Sertanejo'}
         else:
-            return {
-                'error': 'Ops, tente novamente'
-            }
+            abort(401, message='Genero da música não suportado')
 
 
 api.add_resource(Model, '/model')
