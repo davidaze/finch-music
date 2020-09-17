@@ -27,7 +27,7 @@ def clean_text(text):
 class Model(Resource):
     def post(self):
         args = model_post_args.parse_args()
-        features = [clean_text(request.form.get('lyric'))]
+        features = [clean_text(args.lyric)]
         final_features = countVec.transform(features)
         prediction = model.predict(final_features)
         if prediction == 1:
@@ -47,3 +47,4 @@ api.add_resource(Model, '/model')
 
 if __name__ == '__main__':
     app.run(debug=True)
+""

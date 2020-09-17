@@ -6,7 +6,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.corpus import stopwords
 
 df = pd.read_csv('Data/final.csv', index_col=0)
-
 y = []
 X = []
 
