@@ -47,9 +47,15 @@
     - Para a implantação do modelo, foi utilizado o framework Flask, em REST. O modelo é bem simples, tendo apenas uma rota, em método post, os dados são trafegados em formato JSON para atender as demandas do React e por ser de fácil acesso
     - Já o Front-End, foi feito em React, pela possibilidade de se criar um SPA.
 
-# Critérios do projeto
+# Análise Exploratória
 
 [análise exploratória do conjunto de dados de forma descritiva](Análise.md)
+
+# Considerações Finais
+
+Por mais que tenha sido um projeto complicado, e tenha passado muito tempo pesquisando e resolvendo erros, o projeto parece promissor.
+
+A falta de Insights, e de conhecimento sobre NLP, levou o projeto à ser um MVP. Com futuras correções e mais pesquisa, talvez seja possível atingir mais de 90% de acurácia
 
 # Referências
 
