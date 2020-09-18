@@ -1,0 +1,11 @@
+Flask==1.1.2
+Flask-RESTful==0.3.8
+flask_cors
+numpy==1.19.2
+scikit-learn==0.23.2
+toml==0.10.1
+tqdm==4.49.0
+urllib3==1.25.10
+Werkzeug==1.0.1
+wrapt==1.12.1
+gunicorn
