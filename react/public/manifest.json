@@ -1,0 +1,14 @@
+{
+  "short_name": "Gênero da Música",
+  "name": "Preditor do Gênero da Música",
+  "icons": [
+    {
+      "src": "nota-musical.png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
