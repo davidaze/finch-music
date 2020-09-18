@@ -1,6 +1,6 @@
 # Projeto Classificador de Música
 
-[https://www.notion.so/daviaaze/Projeto-Classificador-de-M-sica-d5f6c4f219aa4a088e8877456d8d83f3] (Este documento é uma cópia desta página do Notion)
+[Este documento é uma cópia desta página do Notion](https://www.notion.so/daviaaze/Projeto-Classificador-de-M-sica-d5f6c4f219aa4a088e8877456d8d83f3)
 
 # Metodologia utilizada
 
